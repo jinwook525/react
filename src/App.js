@@ -4,8 +4,9 @@ import './App.css';
 //import MyClock from './021/MyClock';
 import { FaHome } from "react-icons/fa";
 // import MyDiv1 from './03/MyDiv1';
-import MyList from './04/MyList';
-
+// import MyList from './04/MyList';
+// import Lotto from './05/Lotto';
+import FoodMain from './06/FoodMain';
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
                           flex flex-col justify-center items-center
                           overflow-y-auto'>
       {/* <MyDiv1/> */}
-      <MyList/>
+      {/* <MyList/> */}
+      {/* <Lotto /> */}
+      <FoodMain/>
       </main>
       <footer className='w-full h-20
                           flex justify-center items-center
