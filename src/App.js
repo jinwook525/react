@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 // import Hello from './01/Hello';
-import MyClock from './021/MyClock';
+// import MyClock from './021/MyClock';
 import { FaHome } from "react-icons/fa";
 // import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
 // import Lotto from './05/Lotto';
 // import FoodMain from './06/FoodMain';
-import BoxOffice from './07/BoxOffice';
-
+// import BoxOffice from './07/BoxOffice';
+// import MyBox from './08/MyBox';
+import Traffic from './09/Traffic';
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
       {/* <MyList/> */}
       {/* <Lotto /> */}
       {/* <FoodMain/> */}
-      <BoxOffice />
+      {/* <BoxOffice /> */}
+      {/* <MyBox /> */}
+      <Traffic />
       </main>
       <footer className='w-full h-20
                           flex justify-center items-center
