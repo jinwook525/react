@@ -1,13 +1,11 @@
 import TailButton from "../UI/TailButton"
 import { useEffect, useState } from "react"
 
-export default function TrafficNav({title}) {
-  const c = ['차대사람', '차대차', '차량단독', '철길건널목']
-  const [sel,setSel] = useState()
+export default function TrafficNav({title, c, sel, setSel}) {
 
   const handleClick1 = (item) => {
       setSel(item);
-
+   
   }
   const tags = c.map(item => <TailButton key={item} caption={item} color={item == sel ? 'orange' :'blue'} handleClick ={()=> handleClick1(item)}/> )
   useEffect(()=>{
