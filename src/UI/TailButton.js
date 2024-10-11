@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TailButton({caption, color, handleClick}) {
+export default function TailButton({caption, color, handleClick, size}) {
   const btColor = {
     'blue': 'bg-blue-500' ,
     'orange' : 'bg-orange-500' ,
@@ -17,6 +17,7 @@ export default function TailButton({caption, color, handleClick}) {
                        ${btColor[color]}
                        ${btColorHover[color]}
                        font-bold text-white rounded-md
+                       ${size ? size : ''}
                         p-3 mx-2
                        `}
                        onClick={handleClick}

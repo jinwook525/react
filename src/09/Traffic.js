@@ -48,8 +48,9 @@ export default function Traffic() {
   useEffect(()=> {
     let tm = tdata.filter(item => item['사고유형대분류'] == selC1)
     tm= tm.map(item => item['사고유형'])
-    
+    //사고유형 생성
     setC2(tm)
+    //대분류를 선택했을 때 info 초기화
     setInfo("")
   }, [selC1])
 
