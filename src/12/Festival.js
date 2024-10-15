@@ -8,7 +8,7 @@ export default function Festival() {
   //구 정보
   const [gunm, setGunm] = useState([]);
   // 선택된 구 정보
-  const [selgu, setSelgu] = useState()
+  const [tags, setTags] = useState([])
 
   //select box를 제어
   const gu = useRef()
@@ -26,6 +26,17 @@ export default function Festival() {
   // option  이 선택되면
   const handleSelect = () => {
     console.log(gu.current.value)
+    //해당하는 구의 축제 추출
+    const tm = tdata.filter(item=> item.GUGUN_NM === gu.current.value)
+    .map(item => <TailCard 
+      key ={item.UC_SEQ}
+      imgUrl = {item.MAIN_IMG_NORMAL} 
+      title =  {item.MAIN_TITLE}
+      content = {item.TRFC_INFO}
+      kw = {item.PLACE}/>
+
+)
+      setTags(tm)
   }
   useEffect(() => {
     getFetchData()
@@ -52,6 +63,9 @@ export default function Festival() {
             {gunm}
           </select>
         </div>
+      </div>
+      <div className="w-10/12 p-5 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+        {tags}
       </div>
     </div>
   )
