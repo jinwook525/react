@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import Hello from './01/Hello';
 import MyClock from './021/MyClock';
-// import MyDiv1 from './03/MyDiv1';
+import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import FoodMain from './06/FoodMain';
@@ -20,6 +20,7 @@ import Fcst from './14/Fcst';
 import FcstList from './14/FcstList';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import RecoilMain from './15/RecoilMain';
 function App() {
   return (
     <BrowserRouter>
@@ -57,6 +58,8 @@ function App() {
         <Route path='/festival' element={<Festival />}/>
         <Route path='/fcst' element={<Fcst />}/>
         <Route path='/fcstlist' element={<FcstList />}/>
+        <Route path='/div' element={<MyDiv1 />}/>
+        <Route path='/recoil' element={<RecoilMain />}/>
       {/* <MyDiv1/> */}
       {/* {< MyClock />} */}
       {/* <MyList/> */}
