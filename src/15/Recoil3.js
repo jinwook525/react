@@ -2,6 +2,7 @@ import TailButton from "../UI/TailButton"
 import { useState, useEffect, useRef } from "react"
 import { AtomN, AtomN2 } from "./AtomN";
 import { useRecoilState } from "recoil";
+import userEvent from "@testing-library/user-event";
 
 export default function Recoil3({x3,y3}) {
   const [x,setX] = useState(x3);
@@ -22,10 +23,24 @@ export default function Recoil3({x3,y3}) {
   useEffect(()=>{
     setY( x * parseInt(inRef.current.value))
   },[x])
-
+  
   useEffect(()=>{
-    setY( x * parseInt(inRef.current.value))
-  },[n])
+    if (!localStorage.getItem("x"))
+      setX(0);
+    else
+      setX(parseInt(localStorage.getItem('x')))
+  },[])
+  
+  useEffect(()=>{
+    localStorage.setItem('x',x);
+
+  },[x])
+  // useEffect(()=>{
+  //   setY( x * parseInt(inRef.current.value))
+  // },[n])
+  useEffect (()=> {
+
+  },[])
 
   return (
     <div className="w-full h-4/5 flex flex-col bg-lime-400 text-black font-bold mt-10 p-5 ">

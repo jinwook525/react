@@ -18,9 +18,10 @@ import Festival from './12/Festival';
 // import RouteMain from './13/RouteMain';
 import Fcst from './14/Fcst';
 import FcstList from './14/FcstList';
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RecoilMain from './15/RecoilMain';
+import Rest from './16/Rest';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <BrowserRouter>
@@ -41,6 +42,7 @@ function App() {
             <li className='mx-4 p-2 hover:bg-amber-200 rounded-md'><Link to='/gallery'>관광</Link></li>
             <li className='mx-4 p-2 hover:bg-amber-200 rounded-md'><Link to='/festival'>축제</Link></li>
             <li className='mx-4 p-2 hover:bg-amber-200 rounded-md'><Link to='/fcst'>일기예보</Link></li>
+            <li className='mx-4 p-2 hover:bg-amber-200 rounded-md'><Link to='/rest'>Restfull</Link></li>
             </ul>  
         <p className='text-2xl font-bold p-5'><Link to='/'><FaHome /></Link>
         </p>
@@ -60,6 +62,7 @@ function App() {
         <Route path='/fcstlist' element={<FcstList />}/>
         <Route path='/div' element={<MyDiv1 />}/>
         <Route path='/recoil' element={<RecoilMain />}/>
+        <Route path='/rest' element={<Rest />} />
       {/* <MyDiv1/> */}
       {/* {< MyClock />} */}
       {/* <MyList/> */}

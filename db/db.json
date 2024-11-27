@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "title": "This is a comment1.",
+      "author": "김경민12",
+      "id": "1"
+    },
+    {
+      "id": "9c57",
+      "title": "This is a comment1.",
+      "author": "김경민1"
+    },
+    {
+      "id": "f80f",
+      "title": "This is a comment1.",
+      "author": "김경민3"
+    },
+    {
+      "id": "8c59",
+      "title": "This is a comment1.123",
+      "author": "김경민123"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "This is a comment1.",
+      "postId": 1
+    },
+    {
+      "id": "2",
+      "body": "This is a comment2.",
+      "postId": 1
+    }
+  ]
+}
